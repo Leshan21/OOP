@@ -4,21 +4,30 @@ class Undergraduate{
     private int year;
     private double gpa;
 
-    private void setData(String regNo,String name,int year,double gpa){
+    public Undergraduate(String regNo,String name,int year,double gpa){
         this.regNo = regNo;
         this.name = name;
         this.year = year;
         this.gpa = gpa;       
     }
 
-    private void displayData(){
-        System.out.println("regNo: "+ regNo);
-        System.out.println("name: "+ name);
-        System.out.println("year: "+ year);
-        System.out.println("gpa: "+gpa);
+    public String getRegno(){
+        return regNo;
     }
 
-    private void showAward(){
+    public String getName(){
+        return name;
+    }
+
+    public int getYear(){
+        return year;
+    }
+
+    public double getGpa(){
+        return gpa;
+    }
+
+    public void showAward(){
         if(gpa >= 3.7){
             System.out.println("First class");
         }else if(3.3<= gpa && gpa<3.7){
@@ -31,9 +40,9 @@ class Undergraduate{
     }
 
     public static void main(String[] args) {
-        Undergraduate uu = new Undergraduate();
-        uu.setData("2021Com101", "Leshan", 2021, 3.0);
-        uu.displayData();
-        uu.showAward();
+        Undergraduate jone = new Undergraduate("2021COM100", "jone", 2021, 3.6);
+        System.out.println(jone.getName());
+        System.out.println(jone.getRegno());
+        jone.showAward();
     } 
 }
