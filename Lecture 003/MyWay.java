@@ -1,5 +1,5 @@
 public class MyWay{
-    public static double distance = 100;
+    public static final double distance = 100;
 
     public double needToGo(double displacement){
         return distance - displacement;
